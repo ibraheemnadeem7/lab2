@@ -59,11 +59,16 @@ button {
 }
 
 .guess-box {
-    width: 40px; /* Reduced width */
-    height: 40px; /* Reduced height */
+    width: 40px; /* Adjusted width */
+    height: 40px; /* Adjusted height */
     margin: 3px; /* Reduced margin */
     font-size: 14px; /* Updated font size */
     border-radius: 3px; /* Maintain box border radius */
+    background-color: #f0f0f0; /* Added background color */
+    border: 2px solid #ccc; /* Added border */
+    display: flex; /* Added display flex */
+    justify-content: center; /* Added justify-content center */
+    align-items: center; /* Added align-items center */
 }
 
 #backspace {
@@ -129,6 +134,7 @@ button {
     align-items: center;
     justify-content: center;
     margin-bottom: 5px; /* Reduced margin */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .try-text {
