@@ -18,14 +18,22 @@ body {
     padding-top: 50px;
 }
 
-/* Adjusted button sizes */
-select, button, input {
-    margin-top: 5px; /* Reduced margin */
-    padding: 8px; /* Reduced padding */
-    font-size: 12px; /* Updated font size */
+#game-container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-/* Reduced font sizes */
+#start-screen, #game-screen {
+    background-color: #EEE8AA;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#code-length, #allow-duplicates, #start-button {
+    background-color: #F0FFFF;
+}
+
 h1, h2 {
     color: #333;
     font-size: 16px; /* Updated font size */
@@ -35,29 +43,143 @@ p {
     margin-bottom: 5px; /* Reduced margin */
 }
 
-/* Reduced size of guess boxes */
-.guess-box {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin: 3px; /* Reduced margin */
-    font-size: 14px; /* Updated font size */
+select, button, input {
+    margin-top: 5px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    font-size: 12px; /* Updated font size */
+    border-radius: 3px; /* Maintain button border radius */
 }
 
-/* Smaller size for digits */
+select {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+.guess-box {
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+    margin: 3px; /* Reduced margin */
+    font-size: 14px; /* Updated font size */
+    border-radius: 3px; /* Maintain box border radius */
+}
+
+#backspace {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 14px; /* Updated font size */
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Maintain button border radius */
+    cursor: pointer;
+}
+
+#digits-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
 .digit {
     margin: 3px; /* Reduced margin */
     padding: 10px 15px; /* Reduced padding */
     font-size: 20px; /* Updated font size */
+    border-radius: 3px; /* Maintain digit button border radius */
+    background-color: #F0FFFF;
+    color: #2F3C7E;
+    cursor: pointer;
 }
 
-/* Smaller size for key circles */
+#submit-guess, #restart-button {
+    display: block;
+    width: 30%;
+    margin: 10px auto;
+    padding: 16px;
+    font-size: 16px; /* Updated font size */
+    text-align: center;
+}
+
+#submit-guess {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#feedback, #previous-tries, #tries-remaining {
+    text-align: left;
+    font-size: 14px; /* Updated font size */
+}
+
+#tries-remaining {
+    margin-top: 20px;
+    font-size: 14px; /* Updated font size */
+    font-weight: bold;
+    background-color: #F0FFFF;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 3px; /* Maintain button border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.try-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.try-text {
+    font-size: 12px; /* Updated font size */
+}
+
 .circle {
     width: 16px; /* Reduced width */
     height: 16px; /* Reduced height */
+    border-radius: 50%; /* Maintain circle border radius */
     margin: 3px; /* Reduced margin */
 }
 
-/* Smaller size for try text */
-.try-text {
-    font-size: 12px; /* Updated font size */
+.green-circle {
+    background-color: green;
+}
+
+.yellow-circle {
+    background-color: yellow;
+}
+
+.black-circle {
+    background-color: black;
+}
+
+#key {
+    float: left;
+    margin-right: 20px;
+}
+
+.key-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.key-item .circle {
+    width: 16px; /* Reduced width */
+    height: 16px; /* Reduced height */
+    border-radius: 50%; /* Maintain circle border radius */
+    margin-right: 5px; /* Reduced margin */
+}
+
+.key-item span {
+    color: black; 
+}
+
+.invisible-line {
+    border: none;
+    height: 20px; 
+    background-color: transparent !important; 
+    margin: 0; 
+    padding: 0; 
 }
