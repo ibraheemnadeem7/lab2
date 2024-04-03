@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://db.onlinewebfonts.com/c/e0b3967aaed1ed967bc7735e63686bb5?family=CCSignLanguage+Regular" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Welcome to the PIN Guessing Game</h1>
+            <h1>Choose the code length:</h1>
+            <select id="code-length">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+            </select>
+            <h1>Allow duplicate numbers?</h1>
+            <select id="allow-duplicates">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <button id="start-button">Start Game</button>
+        </div>
+        <div id="game-screen" style="display: none;">
+            <h1>PIN Guessing Game</h1>
+            <h1>Number of Attempts Remaining:</h1>
+            <div id="tries-remaining"></div>
+            <h1>Guess the PIN:</h1>
+            <div id="guess-container">
+            </div>
+            <div id="digits-container">
+                <button class="digit">0</button>
+                <button class="digit">1</button>
+                <button class="digit">2</button>
+                <button class="digit">3</button>
+                <button class="digit">4</button>
+                <button class="digit">5</button>
+                <button class="digit">6</button>
+                <button class="digit">7</button>
+                <button class="digit">8</button>
+                <button class="digit">9</button>
+                <button id="backspace">⌫</button>
+            </div>
+
+            <div id="key">
+                <h2>Key</h2>
+                <div class="key-item">
+                    <div class="circle green-circle"></div>
+                    <span>Exact Match</span>
+                </div>
+                <div class="key-item">
+                    <div class="circle yellow-circle"></div>
+                    <span>Match in wrong position</span>
+                </div>
+                <div class="key-item">
+                    <div class="circle black-circle"></div>
+                    <span>No Match</span>
+                </div>
+            </div>
+            <button id="submit-guess">Submit Guess</button>
+            <button id="restart-button">Restart Game</button>
+            <hr class="invisible-line">
+            <hr class="invisible-line">
+            <hr class="invisible-line">
+            <div id="feedback"></div>
+            <div id="previous-tries"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
