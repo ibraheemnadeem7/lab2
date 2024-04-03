@@ -1,12 +1,11 @@
 body, #start-screen, #game-screen, h1, h2, p, select, button, input { 
     font-family: 'Courier New', Arial, sans-serif;
-    font-size: 14px; /* Updated font size */
 }
 
 #previous-tries, #feedback, #tries-remaining {
     text-align: left;
     color: black;
-    font-size: 14px; /* Updated font size */
+    font-size: 10px;
     font-family: 'Courier New', Arial, sans-serif;
 }
 
@@ -15,7 +14,7 @@ body {
     text-align: center;
     background-color: #2F3C7E;
     color: #fff;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 #game-container {
@@ -26,28 +25,33 @@ body {
 #start-screen, #game-screen {
     background-color: #EEE8AA;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #code-length, #allow-duplicates, #start-button {
     background-color: #F0FFFF;
+    font-size: 25px;
+
 }
 
 h1, h2 {
     color: #333;
-    font-size: 16px; /* Updated font size */
 }
 
 p {
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
 }
 
 select, button, input {
-    margin-top: 5px; /* Reduced margin */
-    padding: 8px; /* Reduced padding */
-    font-size: 12px; /* Updated font size */
-    border-radius: 3px; /* Maintain button border radius */
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ADD8E6;
+    color: #2F3C7E;
+    cursor: pointer;
 }
 
 select {
@@ -58,44 +62,56 @@ button {
     width: 100%;
 }
 
+#guess-container {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 5px; 
+
+}
+
 .guess-box {
-    width: 40px; /* Adjusted width */
-    height: 40px; /* Adjusted height */
-    margin: 3px; /* Reduced margin */
-    font-size: 14px; /* Updated font size */
-    border-radius: 3px; /* Maintain box border radius */
-    background-color: #f0f0f0; /* Added background color */
-    border: 2px solid #ccc; /* Added border */
-    display: flex; /* Added display flex */
-    justify-content: center; /* Added justify-content center */
-    align-items: center; /* Added align-items center */
+    width: 35px;
+    height:35px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
 
 #backspace {
-    margin-left: 10px;
-    padding: 10px;
-    font-size: 14px; /* Updated font size */
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 10px;
     background-color: #f44336;
     color: #fff;
     border: none;
-    border-radius: 3px; /* Maintain button border radius */
+    border-radius: 5px;
     cursor: pointer;
 }
 
 #digits-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px; 
+
 }
 
 .digit {
-    margin: 3px; /* Reduced margin */
-    padding: 10px 15px; /* Reduced padding */
-    font-size: 20px; /* Updated font size */
-    border-radius: 3px; /* Maintain digit button border radius */
+    margin: 5px;
+    padding: 15px 20px;
+    font-size: 25px;
     background-color: #F0FFFF;
     color: #2F3C7E;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -103,8 +119,8 @@ button {
     display: block;
     width: 30%;
     margin: 10px auto;
-    padding: 16px;
-    font-size: 16px; /* Updated font size */
+    padding: 8px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -115,17 +131,16 @@ button {
 
 #feedback, #previous-tries, #tries-remaining {
     text-align: left;
-    font-size: 14px; /* Updated font size */
 }
 
 #tries-remaining {
-    margin-top: 20px;
-    font-size: 14px; /* Updated font size */
-    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px; 
+    font-weight: bold; 
     background-color: #F0FFFF;
     color: black;
-    padding: 10px 20px;
-    border-radius: 3px; /* Maintain button border radius */
+    padding: 8px 13px; 
+    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -133,19 +148,20 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px; /* Reduced margin */
-    white-space: nowrap; /* Prevent wrapping */
+    margin-bottom: 10px;
 }
 
 .try-text {
-    font-size: 12px; /* Updated font size */
+    font-size: 10px;
+    margin-right: 5px;
 }
 
 .circle {
-    width: 16px; /* Reduced width */
-    height: 16px; /* Reduced height */
-    border-radius: 50%; /* Maintain circle border radius */
-    margin: 3px; /* Reduced margin */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
 }
 
 .green-circle {
@@ -168,14 +184,27 @@ button {
 .key-item {
     display: flex;
     align-items: center;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 10px;
+    
 }
 
 .key-item .circle {
-    width: 16px; /* Reduced width */
-    height: 16px; /* Reduced height */
-    border-radius: 50%; /* Maintain circle border radius */
-    margin-right: 5px; /* Reduced margin */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.key-item .circle.green-circle {
+    background-color: green;
+}
+
+.key-item .circle.yellow-circle {
+    background-color: yellow;
+}
+
+.key-item .circle.black-circle {
+    background-color: black;
 }
 
 .key-item span {
@@ -184,8 +213,7 @@ button {
 
 .invisible-line {
     border: none;
-    height: 20px; 
+    height: 35px; 
     background-color: transparent !important; 
     margin: 0; 
-    padding: 0; 
-}
+    padding: 0; }
