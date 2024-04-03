@@ -133,6 +133,9 @@ button {
     text-align: left;
 }
 
+#feedback{
+    font-size: 30px;
+}
 #tries-remaining {
     margin-top: 10px;
     font-size: 20px; 
@@ -152,7 +155,7 @@ button {
 }
 
 .try-text {
-    font-size: 10px;
+    font-size: 30px;
     margin-right: 5px;
 }
 
