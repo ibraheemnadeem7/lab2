@@ -1,6 +1,6 @@
 # Makefile for web deployment
 # Must first:
-# mkdir /var/www/html/lab2
+# sudo mkdir /var/www/html/lab2
 # sudo chown ubuntu /var/www/html/lab2
 
 all: PutHTML
